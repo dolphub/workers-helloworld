@@ -1,0 +1,8 @@
+{
+  "name": "workers-helloworld",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:dolphub/workers-helloworld.git",
+  "author": "dolphub <randy.mikkelsaar@gmail.com>",
+  "license": "MIT"
+}
