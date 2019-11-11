@@ -1,6 +1,8 @@
-name = "api"
+name = "api-helloworkers"
 type = "webpack"
 account_id = "96d0ba6092cd400306e081e3b4ecaafc"
 workers_dev = true
-route = ""
-zone_id = ""
+
+[env.production]
+route = "helloworkers.dolphub.dev/api"
+zone_id = "1c97724d937ac90a4434954956ed7042"

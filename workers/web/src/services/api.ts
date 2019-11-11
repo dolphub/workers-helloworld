@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const DEFAULT_DOMAIN = 'dolphub.workers.dev';
+// Reference from api/wrangler.toml name
+const DEFAULT_API = 'api-helloworkers.dolphub.workers.dev';
 
 // const env = process.env.REACT_APP_NODE_ENV;
-const API_DOMAIN = process.env.REACT_APP_API_DOMAIN || DEFAULT_DOMAIN;
-axios.defaults.baseURL = `https://api.${API_DOMAIN}`;
+const API_DOMAIN = process.env.REACT_APP_API_DOMAIN || DEFAULT_API;
+axios.defaults.baseURL = `https://${API_DOMAIN}`;
 
 export { axios };
