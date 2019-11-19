@@ -2,6 +2,9 @@ name = "api-helloworkers"
 type = "webpack"
 account_id = "96d0ba6092cd400306e081e3b4ecaafc"
 workers_dev = true
+kv-namespaces = [ 
+        { binding = "ns1", id = "d11d9dad2b02402a8274517204aaf619" } 
+]
 
 [env.production]
 route = "helloworkers.dolphub.dev/api"

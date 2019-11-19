@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "wrangler build; cloudworker -p 3001 -d --kv-file ns1=./test-data.json worker/script.js"
+}
