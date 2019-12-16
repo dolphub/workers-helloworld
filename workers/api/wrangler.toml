@@ -7,5 +7,5 @@ kv-namespaces = [
 ]
 
 [env.production]
-route = "helloworkers.dolphub.dev/api"
+route = "api.helloworkers.dolphub.dev/*"
 zone_id = "1c97724d937ac90a4434954956ed7042"

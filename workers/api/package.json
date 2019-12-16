@@ -29,5 +29,8 @@
     "typescript": "^3.5.3",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "@helloandre/tini": "^0.3.0"
   }
 }

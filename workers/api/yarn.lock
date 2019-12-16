@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-1.0.6.tgz#f4c74e818a3d935e258ec0b3c0ab6788f0385057"
   integrity sha512-hmpkFqiRNMkcgUPedOTdM3qIn4sM7k3KvtpmMu0N9mtXlAAFqq44UN8BZp/Ba8vefI8XywS/31ZVpD/bnXIeBA==
 
+"@helloandre/tini@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@helloandre/tini/-/tini-0.3.0.tgz#93675f3ffa38f1671334dd1782e948191028deb2"
+  integrity sha512-89ZykANLrFj+BdvuLiSow5jeO9tBer1n9ivimICNMeyeM/K7C1yrc2rZfLcjlFrwJy5YOb0PNYrHf7/Czo1fGQ==
+
 "@types/chai@^4.1.7":
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.4.tgz#8936cffad3c96ec470a2dc26a38c3ba8b9b6f619"
