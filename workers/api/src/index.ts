@@ -1,15 +1,49 @@
 import tini from '@helloandre/tini';
+import { KVNamespace } from '@cloudflare/workers-types';
+
+import { getData, putData, originHeaders } from './handlers';
+
+const random = () => Math.floor(Math.random() * 100);
+
+const putKV = req => {};
 
 tini(router => {
-  router.get('/hello', req => {
-    return { hello: 'world' };
+  router.get('/api/data/:key', async req => {
+    const data = await getData(req.params.key);
+    return new Response(data, {
+      headers: {
+        ...originHeaders(req),
+      },
+    });
   });
-  router.get('/:key', req => {
-    // outputs "myKey, 1"
-    return `${req.params.key}`;
+
+  router.put('/api/data/:key', async req => {
+    const body = await req.json();
+    return putData(req.params.key, body);
+  });
+  router.get('/api/hello', (req: Request) => {
+    const responseObj = {
+      req,
+      referrer: req.referrer,
+      referer: req.headers.get('Referer'),
+      rPolicies: req.headers.get('Referer-Policy'),
+      CT: req.headers.get('Content-Type'),
+    };
+    return new Response(JSON.stringify(responseObj), {
+      headers: {
+        ...originHeaders(req),
+      },
+    });
+  });
+  router.get('/api/random', req => {
+    const num = random();
+    return new Response(JSON.stringify({ data: num }), {
+      headers: {
+        ...originHeaders(req),
+      },
+    });
   });
 });
-// const random = () => Math.floor(Math.random() * 100);
 
 // const defaultHeaders = { 'Access-Control-Allow-Origin': '*', Vary: 'Origin' };
 

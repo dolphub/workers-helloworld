@@ -5,7 +5,9 @@ class ApiService {
   constructor(private readonly axios: AxiosInstance) {}
 
   async random() {
-    return await this.axios.get('');
+    const data = await this.axios.get('/hello');
+    console.log(data);
+    return await this.axios.get('/random');
   }
 }
 

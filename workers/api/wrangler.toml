@@ -1,11 +1,15 @@
 name = "api-helloworkers"
 type = "webpack"
+webpack_config = "webpack.config.js"
 account_id = "96d0ba6092cd400306e081e3b4ecaafc"
 workers_dev = true
 kv-namespaces = [ 
-        { binding = "ns1", id = "d11d9dad2b02402a8274517204aaf619" } 
+        { binding = "testData", id = "e8b4425f81e249228881e50d3618047a" } 
 ]
 
 [env.production]
-route = "api.helloworkers.dolphub.dev/*"
+route = "helloworkers.dolphub.dev/api/*"
 zone_id = "1c97724d937ac90a4434954956ed7042"
+kv-namespaces = [ 
+        { binding = "testData", id = "e8b4425f81e249228881e50d3618047a" } 
+]
