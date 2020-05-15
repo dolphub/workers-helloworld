@@ -25,5 +25,5 @@ jobs:
       with:
         cmd: --cwd ${{env.site-directory}} build
     - name: Run simple echo command
-      run: ls /public
+      run: ls -lart
       working-directory: ${{env.site}}
