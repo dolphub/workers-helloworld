@@ -42,5 +42,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           workingDirectory: ${{ env.sitedir }}
+          environment: 'production'
+        name: Deploy to workers
 
 
