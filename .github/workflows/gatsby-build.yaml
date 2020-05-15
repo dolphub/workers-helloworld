@@ -28,3 +28,11 @@ jobs:
       - run: ls -lart ./public && echo ${{github.ref}}
         working-directory: ${{env.sitedir}}
         name: Check output files
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          # Artifact name
+          name: gatsby-site-${{github.ref}}-build
+          # A file, directory or wildcard pattern that describes what to upload
+          path: ./site/public
