@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      working-directory: ./site
+      site-directory: ./site
 
     strategy:
       matrix:
@@ -20,9 +20,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: borales/actions-yarn@v2.0.0
       with:
-        cmd: install # will run `yarn install` command
+        cmd: --cwd ${{env.site-directory}} install
     - uses: borales/actions-yarn@v2.0.0
       with:
-        cmd: build # will run `yarn build` command
+        cmd: --cwd ${{env.site-directory}} build
     - name: Run simple echo command
       run: ls /public
+      working-directory: ${{env.site}}
