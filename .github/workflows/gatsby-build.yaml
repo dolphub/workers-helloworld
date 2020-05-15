@@ -35,4 +35,4 @@ jobs:
           # Artifact name
           name: gatsby-site-${{github.ref}}-build
           # A file, directory or wildcard pattern that describes what to upload
-          path: ./site/public
+          path: site/public
