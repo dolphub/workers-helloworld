@@ -36,3 +36,13 @@ jobs:
           name: gatsby-site-build
           # A file, directory or wildcard pattern that describes what to upload
           path: site/public/
+
+
+      - name: Deploy to workers
+        uses: cloudflare/wrangler-action:1.1.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          
+
+
+
