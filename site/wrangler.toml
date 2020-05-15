@@ -1,0 +1,12 @@
+name = "worker-site"
+type = "webpack"
+account_id = "96d0ba6092cd400306e081e3b4ecaafc"
+workers_dev = true
+
+[site]
+bucket = "public"
+entry-point = "workers-site"
+
+[env.production]
+route = "site.dolphub.dev/*"
+zone_id = "1c97724d937ac90a4434954956ed7042"
