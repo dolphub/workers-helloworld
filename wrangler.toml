@@ -1,9 +1,0 @@
-name = "workers-site"
-type = "webpack"
-account_id = "96d0ba6092cd400306e081e3b4ecaafc"
-workers_dev = true
-route = ""
-zone_id = ""
-
-[site]
-bucket = "./public"
