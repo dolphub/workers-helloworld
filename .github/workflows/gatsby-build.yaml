@@ -17,10 +17,10 @@ jobs:
         with:
           node-version: 12
 
-      - run: --cwd ${{env.sitedir}} yarn install
+      - run: yarn install --cwd ${{env.sitedir}}
         name: Install dependencies
 
-      - run: --cwd ${{env.sitedir}} yarn build --log-pages
+      - run: yarn build --log-pages --cwd ${{env.sitedir}}
         name: Build
         env:
           NODE_ENV: production
